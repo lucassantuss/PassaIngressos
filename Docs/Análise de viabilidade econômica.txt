@@ -1,0 +1,5 @@
+Análise de viabilidade econômica
+
+- Verificar custos para manter o software (Infraestrutura / Servidores)
+- Custo de Desenvolvimento
+- Receita / Lucro de retorno do projeto

@@ -1,0 +1,7 @@
+Organização dos Integrantes no Scrum:
+
+Scrum Master/Product Owner - Renan Cesar de Araujo
+
+QA - Danilo Rodrigues Dantas
+
+DEV - Lucas Araujo dos Santos
