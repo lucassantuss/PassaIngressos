@@ -1,8 +1,0 @@
-PROBLEMA
-
-Perca de ingressos por indisponibilidade da presença no dia do show, não conseguir revender o ingresso
-
-SOLUÇÃO
-
-Aplicação que irá conectar pessoas que precisam revender seus ingressos com aquelas que estão procurando 
-por uma oportunidade de última hora para assistir ao seu artista favorito.
