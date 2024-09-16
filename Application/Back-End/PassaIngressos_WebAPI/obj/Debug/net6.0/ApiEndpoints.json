@@ -1,0 +1,177 @@
+[
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "CriarUsuario",
+    "RelativePath": "api/Acesso/CriarUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "PassaIngressos_WebAPI.Dto.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "ExcluirConta",
+    "RelativePath": "api/Acesso/ExcluirConta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "Login",
+    "RelativePath": "api/Acesso/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "PassaIngressos_WebAPI.Dto.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "PesquisarUsuario",
+    "RelativePath": "api/Acesso/PesquisarUsuario/{login}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "RedefinirSenha",
+    "RelativePath": "api/Acesso/RedefinirSenha/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "novaSenha",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "BuscarEventosDisponiveis",
+    "RelativePath": "api/Eventos/BuscarEventosDisponiveis",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "BuscarIngressosPorEvento",
+    "RelativePath": "api/Eventos/BuscarIngressosPorEvento/{idEvento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEvento",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "CriarEvento",
+    "RelativePath": "api/Eventos/CriarEvento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evento",
+        "Type": "PassaIngressos_WebAPI.Dto.Evento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "CriarIngresso",
+    "RelativePath": "api/Eventos/CriarIngresso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingresso",
+        "Type": "PassaIngressos_WebAPI.Dto.Ingresso",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "ExcluirEvento",
+    "RelativePath": "api/Eventos/ExcluirEvento/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "ExcluirIngresso",
+    "RelativePath": "api/Eventos/ExcluirIngresso/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

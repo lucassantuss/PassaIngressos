@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PassaIngressos_WebAPI.Database;
+using PassaIngressos_WebAPI.Dto;
 
 namespace PassaIngressos_WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AcessoController : ControllerBase
     {
@@ -15,38 +17,77 @@ namespace PassaIngressos_WebAPI.Controllers
         }
 
         // Método para criar usuário
-        [HttpPost(Name = "PostNovoUsuario")]
-        public void PostNovoUsuario()
+        [HttpPost("CriarUsuario")]
+        public async Task<IActionResult> CriarUsuario([FromBody] Usuario usuario)
         {
+            var pessoa = await _dbPassaIngressos.Pessoas.FindAsync(usuario.IdPessoa);
 
+            if (pessoa == null)
+                return NotFound("Pessoa não encontrada.");
+
+            usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha); // Criptografa a senha
+
+            _dbPassaIngressos.Usuarios.Add(usuario);
+            await _dbPassaIngressos.SaveChangesAsync();
+
+            return Ok(usuario);
         }
 
         // Método para redefinir senha
-        [HttpPut(Name = "PutRedefinirSenha")]
-        public void PutRedefinirSenha()
+        [HttpPut("RedefinirSenha/{id}")]
+        public async Task<IActionResult> RedefinirSenha(int id, [FromBody] string novaSenha)
         {
+            var usuario = await _dbPassaIngressos.Usuarios.FindAsync(id);
 
+            if (usuario == null)
+                return NotFound("Usuário não encontrado.");
+
+            usuario.Senha = BCrypt.Net.BCrypt.HashPassword(novaSenha);
+            await _dbPassaIngressos.SaveChangesAsync();
+
+            return Ok("Senha redefinida com sucesso.");
         }
 
         // Método para validar usuário e realizar o login
-        [HttpPost(Name = "PostLogin")]
-        public void PostLogin()
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
+            var usuario = await _dbPassaIngressos.Usuarios.SingleOrDefaultAsync(u => u.Login == loginDto.Login);
 
+            if (usuario == null || !BCrypt.Net.BCrypt.Verify(loginDto.Senha, usuario.Senha))
+            {
+                return Unauthorized("Login ou senha inválidos.");
+            }
+
+            return Ok("Login realizado com sucesso.");
         }
 
         // Método para pesquisar usuário
-        [HttpGet(Name = "GetUsuario")]
-        public void GetUsuario()
+        [HttpGet("PesquisarUsuario/{login}")]
+        public async Task<IActionResult> PesquisarUsuario(string login)
         {
+            var usuario = await _dbPassaIngressos.Usuarios.Include(u => u.IdPessoa)
+                                                 .SingleOrDefaultAsync(u => u.Login == login);
 
+            if (usuario == null)
+                return NotFound("Usuário não encontrado.");
+
+            return Ok(usuario);
         }
 
         // Método para excluir conta
-        [HttpDelete(Name = "DeleteUsuario")]
-        public void DeleteUsuario(int? idUsuario)
+        [HttpDelete("ExcluirConta/{id}")]
+        public async Task<IActionResult> ExcluirConta(int id)
         {
+            var usuario = await _dbPassaIngressos.Usuarios.FindAsync(id);
 
+            if (usuario == null)
+                return NotFound("Usuário não encontrado.");
+
+            _dbPassaIngressos.Usuarios.Remove(usuario);
+            await _dbPassaIngressos.SaveChangesAsync();
+
+            return Ok("Conta excluída com sucesso.");
         }
     }
 }

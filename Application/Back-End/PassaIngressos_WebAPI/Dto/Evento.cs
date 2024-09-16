@@ -8,15 +8,15 @@ namespace PassaIngressos_WebAPI.Dto
     {
         [Key]
         [Column("Id_Evento")]
-        public int Id { get; set; }
+        public int IdEvento { get; set; }
 
-        [Column("Nome")]
-        public string Nome { get; set; }
+        [Column("Nome_Evento")]
+        public string NomeEvento { get; set; }
 
-        [Column("Local")]
-        public string Local { get; set; }
+        [Column("Local_Evento")]
+        public string LocalEvento { get; set; }
 
-        [Column("DataHoraEvento")]
+        [Column("Data_Hora_Evento")]
         public DateTime? DataHoraEvento { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace PassaIngressos_WebAPI.Dto
     {
         [Key]
         [Column("Id_Usuario")]
-        public int Id { get; set; }
+        public int IdUsuario { get; set; }
 
         [Column("Login")]
         public string Login { get; set; }
@@ -18,5 +18,8 @@ namespace PassaIngressos_WebAPI.Dto
 
         [Column("Id_Pessoa")]
         public int IdPessoa { get; set; }
+
+        //[Column("Id_Pessoa")]
+        //public Pessoa Pessoa { get; set; }
     }
 }
