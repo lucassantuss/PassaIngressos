@@ -18,5 +18,10 @@ namespace PassaIngressos_WebAPI.Dto
 
         [Column("Data_Hora_Evento")]
         public DateTime? DataHoraEvento { get; set; }
+
+        [Column("Id_Arquivo_Evento")]
+        public int? IdArquivoEvento { get; set; }
+
+        public List<Ingresso> Ingressos { get; set; }
     }
 }

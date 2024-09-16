@@ -12,5 +12,7 @@ namespace PassaIngressos_WebAPI.Dto
 
         [Column("Tabela")]
         public string Tabela { get; set; }
+
+        public List<ItemTabelaGeral> ItensTabelaGeral { get; set; }
     }
 }

@@ -8,6 +8,14 @@ CREATE SCHEMA core
 CREATE SCHEMA venda
 
 -- Criação das tabelas
+CREATE TABLE core.Arquivo (
+    Id_Arquivo INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    Conteudo_Arquivo VARBINARY(MAX) NOT NULL,
+    Extensao VARCHAR(5) NULL,
+    Content_Type VARCHAR(100) NULL,
+    Nome VARCHAR(8000) NULL
+);
+
 CREATE TABLE core.Tabela_Geral (
     Id_Tabela_Geral INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
     Tabela VARCHAR(50) NOT NULL
@@ -29,7 +37,8 @@ CREATE TABLE core.Pessoa (
     CPF VARCHAR(11),
     RG VARCHAR(15),
     Id_Arquivo_Foto INT,
-    CONSTRAINT FK_Id_Tg_Sexo FOREIGN KEY (Id_Tg_Sexo) REFERENCES core.Item_Tabela_Geral(Id_Item_Tabela_Geral)
+    CONSTRAINT FK_Id_Tg_Sexo FOREIGN KEY (Id_Tg_Sexo) REFERENCES core.Item_Tabela_Geral(Id_Item_Tabela_Geral),
+    CONSTRAINT FK_Id_Arquivo_Foto FOREIGN KEY (Id_Arquivo_Foto) REFERENCES core.Arquivo(Id_Arquivo)
 );
 
 CREATE TABLE acesso.Perfil (
@@ -65,7 +74,9 @@ CREATE TABLE venda.Evento (
     Id_Evento INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
     Nome_Evento VARCHAR(100),
     Local_Evento VARCHAR(200),
-    Data_Hora_Evento DATETIME
+    Data_Hora_Evento DATETIME,
+    Id_Arquivo_Evento INT,
+    CONSTRAINT FK_Id_Arquivo_Evento FOREIGN KEY (Id_Arquivo_Evento) REFERENCES core.Arquivo(Id_Arquivo)
 );
 
 CREATE TABLE venda.Ingresso (
