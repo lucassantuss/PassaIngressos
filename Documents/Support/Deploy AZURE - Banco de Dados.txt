@@ -1,0 +1,11 @@
+Easily Deploy a .NET 7 API to Azure!
+> https://www.youtube.com/watch?v=EKqXAMLsnKQ
+
+Setting Up Microsoft SQL Server and Database in Azure: Step-by-Step Start Guide
+> https://www.youtube.com/watch?v=YnGNRxgt47Y
+
+How to use Azure SQL Databases | Azure Fundamentals
+> https://www.youtube.com/watch?v=9ur0OpMADuM
+
+Set Up Microsoft Azure SQL Server and SQL Database (Step-By-Step Tutorial)
+> https://www.youtube.com/watch?v=6joGkZMVX4o
