@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|c:\\github\\passaingressos\\application\\back-end\\passaingressos_webapi\\controllers\\eventoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|solutionrelative:controllers\\eventoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|c:\\github\\passaingressos\\application\\back-end\\passaingressos_webapi\\controllers\\acessocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|solutionrelative:controllers\\acessocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|c:\\github\\passaingressos\\application\\back-end\\passaingressos_webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|c:\\github\\passaingressos\\application\\back-end\\passaingressos_webapi\\database\\dbpassaingressos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|solutionrelative:database\\dbpassaingressos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|c:\\github\\passaingressos\\application\\back-end\\passaingressos_webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|c:\\github\\passaingressos\\application\\back-end\\passaingressos_webapi\\controllers\\eventoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|solutionrelative:controllers\\eventoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{70C8F931-E2CA-4EF8-8DEF-4C55775AA1EB}|PassaIngressos_WebAPI.csproj|c:\\github\\passaingressos\\application\\back-end\\passaingressos_webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -22,45 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-18T01:00:41.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbPassaIngressos.cs",
+              "DocumentMoniker": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Database\\DbPassaIngressos.cs",
+              "RelativeDocumentMoniker": "Database\\DbPassaIngressos.cs",
+              "ToolTip": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Database\\DbPassaIngressos.cs",
+              "RelativeToolTip": "Database\\DbPassaIngressos.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T01:00:07.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABIAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T01:00:04.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AcessoController.cs",
               "DocumentMoniker": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Controllers\\AcessoController.cs",
               "RelativeDocumentMoniker": "Controllers\\AcessoController.cs",
               "ToolTip": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Controllers\\AcessoController.cs",
               "RelativeToolTip": "Controllers\\AcessoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAF4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-15T21:24:50.828Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "EventosController.cs",
               "DocumentMoniker": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Controllers\\EventosController.cs",
               "RelativeDocumentMoniker": "Controllers\\EventosController.cs",
               "ToolTip": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Controllers\\EventosController.cs",
               "RelativeToolTip": "Controllers\\EventosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T21:24:49.836Z",
+              "WhenOpened": "2024-09-18T01:00:16.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
               "ToolTip": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\Properties\\launchSettings.json",
               "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-15T21:22:55.069Z",
+              "WhenOpened": "2024-09-18T01:00:00.199Z",
               "EditorCaption": ""
             }
           ]

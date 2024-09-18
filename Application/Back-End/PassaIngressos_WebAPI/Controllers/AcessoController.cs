@@ -52,12 +52,12 @@ namespace PassaIngressos_WebAPI.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var usuario = await _dbPassaIngressos.Usuarios.SingleOrDefaultAsync(u => u.Login == loginDto.Login);
+            var usuario = await _dbPassaIngressos.Usuarios
+                                .SingleOrDefaultAsync(u => u.Login == loginDto.Login &&
+                                                           u.Senha == loginDto.Senha);
 
-            if (usuario == null || !BCrypt.Net.BCrypt.Verify(loginDto.Senha, usuario.Senha))
-            {
+            if (usuario == null)
                 return Unauthorized("Login ou senha inválidos.");
-            }
 
             return Ok("Login realizado com sucesso.");
         }
@@ -88,6 +88,18 @@ namespace PassaIngressos_WebAPI.Controllers
             await _dbPassaIngressos.SaveChangesAsync();
 
             return Ok("Conta excluída com sucesso.");
+        }
+
+        // Método para pesquisar perfis
+        [HttpGet("Perfis")]
+        public async Task<IActionResult> PesquisarPerfis()
+        {
+            var listaPerfis = await _dbPassaIngressos.Perfis.ToListAsync();                                   
+
+            if (listaPerfis == null)
+                return NotFound("Não foi encontrado nenhum perfil.");
+
+            return Ok(listaPerfis);
         }
     }
 }

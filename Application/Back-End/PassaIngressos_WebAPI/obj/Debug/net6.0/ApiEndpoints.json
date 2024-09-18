@@ -2,7 +2,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
     "Method": "CriarUsuario",
-    "RelativePath": "api/Acesso/CriarUsuario",
+    "RelativePath": "Acesso/CriarUsuario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +18,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
     "Method": "ExcluirConta",
-    "RelativePath": "api/Acesso/ExcluirConta/{id}",
+    "RelativePath": "Acesso/ExcluirConta/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -34,7 +34,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
     "Method": "Login",
-    "RelativePath": "api/Acesso/Login",
+    "RelativePath": "Acesso/Login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -49,8 +49,18 @@
   },
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "PesquisarPerfis",
+    "RelativePath": "Acesso/Perfis",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
     "Method": "PesquisarUsuario",
-    "RelativePath": "api/Acesso/PesquisarUsuario/{login}",
+    "RelativePath": "Acesso/PesquisarUsuario/{login}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -66,7 +76,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
     "Method": "RedefinirSenha",
-    "RelativePath": "api/Acesso/RedefinirSenha/{id}",
+    "RelativePath": "Acesso/RedefinirSenha/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -87,7 +97,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
     "Method": "BuscarEventosDisponiveis",
-    "RelativePath": "api/Eventos/BuscarEventosDisponiveis",
+    "RelativePath": "Eventos/BuscarEventosDisponiveis",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -97,7 +107,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
     "Method": "BuscarIngressosPorEvento",
-    "RelativePath": "api/Eventos/BuscarIngressosPorEvento/{idEvento}",
+    "RelativePath": "Eventos/BuscarIngressosPorEvento/{idEvento}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -113,7 +123,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
     "Method": "CriarEvento",
-    "RelativePath": "api/Eventos/CriarEvento",
+    "RelativePath": "Eventos/CriarEvento",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -129,7 +139,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
     "Method": "CriarIngresso",
-    "RelativePath": "api/Eventos/CriarIngresso",
+    "RelativePath": "Eventos/CriarIngresso",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -145,7 +155,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
     "Method": "ExcluirEvento",
-    "RelativePath": "api/Eventos/ExcluirEvento/{id}",
+    "RelativePath": "Eventos/ExcluirEvento/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -161,7 +171,7 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
     "Method": "ExcluirIngresso",
-    "RelativePath": "api/Eventos/ExcluirIngresso/{id}",
+    "RelativePath": "Eventos/ExcluirIngresso/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

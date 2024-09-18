@@ -3872,28 +3872,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\081210009\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\lucas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\081210009\\3D Objects\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\PassaIngressos_WebAPI.csproj",
+      "projectUniqueName": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\PassaIngressos_WebAPI.csproj",
       "projectName": "PassaIngressos_WebAPI",
-      "projectPath": "C:\\Users\\081210009\\3D Objects\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\PassaIngressos_WebAPI.csproj",
-      "packagesPath": "C:\\Users\\081210009\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\081210009\\3D Objects\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\obj\\",
+      "projectPath": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\PassaIngressos_WebAPI.csproj",
+      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\081210009\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -3913,6 +3905,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3959,7 +3956,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -28,8 +28,8 @@ INSERT INTO core.Pessoa (Nome, Id_Tg_Sexo, Data_Nascimento, CPF, RG, Id_Arquivo_
 
 -- acesso.Perfil
 INSERT INTO acesso.Perfil (Nome_Perfil, Descricao_Perfil) VALUES 
-('Administrador', 'Acesso total ao sistema'), 
-('Usuário', 'Acesso restrito ao sistema');
+('ADMIN', 'Acesso total ao sistema'), 
+('USER', 'Acesso restrito ao sistema');
 
 -- acesso.Usuario
 INSERT INTO acesso.Usuario (Login, Senha, Id_Pessoa) VALUES 
@@ -48,8 +48,8 @@ INSERT INTO core.Feedback (Descricao_Feedback, Id_Pessoa) VALUES
 
 -- venda.Evento
 INSERT INTO venda.Evento (Nome_Evento, Local_Evento, Data_Hora_Evento, Id_Arquivo_Evento) VALUES 
-('Show de Rock', 'Estádio XYZ', '2024-09-15 20:00', 2), 
-('Feira de Tecnologia', 'Centro de Convenções ABC', '2024-10-01 10:00', 2);
+('Show de Rock', 'Estádio XYZ', CONVERT(datetime, '2024-09-15 20:00:00', 120), 2), 
+('Feira de Tecnologia', 'Centro de Convenções ABC', CONVERT(datetime, '2024-10-01 10:00:00', 120), 2);
 
 -- venda.Ingresso
 INSERT INTO venda.Ingresso (Id_Tg_Tipo_Ingresso, Valor, Id_Pessoa_Anunciante, Id_Pessoa_Comprador, Id_Evento) VALUES 
