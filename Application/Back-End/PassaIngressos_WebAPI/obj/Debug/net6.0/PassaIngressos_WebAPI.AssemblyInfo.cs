@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PassaIngressos_WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3a75edbb4e4d624f5d95c553bba42ee70143467")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4fe6cfd4e6bc230ff14216a1d12ead1cbbcdcf2")]
 [assembly: System.Reflection.AssemblyProductAttribute("PassaIngressos_WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PassaIngressos_WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

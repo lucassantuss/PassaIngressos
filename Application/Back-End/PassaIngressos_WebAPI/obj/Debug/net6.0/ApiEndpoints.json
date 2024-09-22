@@ -1,6 +1,64 @@
 [
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "AdicionarPerfilAoUsuario",
+    "RelativePath": "Acesso/AdicionarPerfilAoUsuario/{idUsuario}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "adicionaPerfilDto",
+        "Type": "PassaIngressos_WebAPI.Dto.UsuarioAdicionaPerfilDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "AlterarPerfil",
+    "RelativePath": "Acesso/AlterarPerfil/{idPerfil}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPerfil",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "perfilAtualizado",
+        "Type": "PassaIngressos_WebAPI.Dto.PerfilDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "CriarPerfil",
+    "RelativePath": "Acesso/CriarPerfil",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "perfilDto",
+        "Type": "PassaIngressos_WebAPI.Dto.PerfilDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
     "Method": "CriarUsuario",
     "RelativePath": "Acesso/CriarUsuario",
     "HttpMethod": "POST",
@@ -8,8 +66,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
-        "Type": "PassaIngressos_WebAPI.Dto.Usuario",
+        "Name": "usuarioDto",
+        "Type": "PassaIngressos_WebAPI.Dto.UsuarioDto",
         "IsRequired": true
       }
     ],
@@ -18,17 +76,27 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
     "Method": "ExcluirConta",
-    "RelativePath": "Acesso/ExcluirConta/{id}",
+    "RelativePath": "Acesso/ExcluirConta/{idUsuario}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idUsuario",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "ListarPerfis",
+    "RelativePath": "Acesso/ListarPerfis",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -49,12 +117,18 @@
   },
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
-    "Method": "PesquisarPerfis",
-    "RelativePath": "Acesso/Perfis",
+    "Method": "PerfisDoUsuario",
+    "RelativePath": "Acesso/PerfisDoUsuario/{idUsuario}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -76,19 +150,51 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
     "Method": "RedefinirSenha",
-    "RelativePath": "Acesso/RedefinirSenha/{id}",
+    "RelativePath": "Acesso/RedefinirSenha/{idUsuario}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idUsuario",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "novaSenha",
-        "Type": "System.String",
+        "Name": "redefineSenhaDto",
+        "Type": "PassaIngressos_WebAPI.Dto.RedefineSenhaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "RemoverPerfil",
+    "RelativePath": "Acesso/RemoverPerfil/{idPerfil}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPerfil",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.AcessoController",
+    "Method": "UsuariosDoPerfil",
+    "RelativePath": "Acesso/UsuariosDoPerfil/{idPerfil}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPerfil",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -96,12 +202,23 @@
   },
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
-    "Method": "BuscarEventosDisponiveis",
-    "RelativePath": "Eventos/BuscarEventosDisponiveis",
-    "HttpMethod": "GET",
+    "Method": "AlterarIngresso",
+    "RelativePath": "Eventos/AlterarIngresso/{idIngresso}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "idIngresso",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ingressoAtualizado",
+        "Type": "PassaIngressos_WebAPI.Dto.AlterarIngressoDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -122,15 +239,20 @@
   },
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
-    "Method": "CriarEvento",
-    "RelativePath": "Eventos/CriarEvento",
+    "Method": "ComprarIngresso",
+    "RelativePath": "Eventos/ComprarIngresso/{idIngresso}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "evento",
-        "Type": "PassaIngressos_WebAPI.Dto.Evento",
+        "Name": "idIngresso",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ingressoComprado",
+        "Type": "PassaIngressos_WebAPI.Dto.ComprarIngressoDto",
         "IsRequired": true
       }
     ],
@@ -138,15 +260,36 @@
   },
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
-    "Method": "CriarIngresso",
-    "RelativePath": "Eventos/CriarIngresso",
+    "Method": "CriarEvento",
+    "RelativePath": "Eventos/CriarEvento",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ingresso",
-        "Type": "PassaIngressos_WebAPI.Dto.Ingresso",
+        "Name": "eventoDto",
+        "Type": "PassaIngressos_WebAPI.Dto.EventoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "EditarEvento",
+    "RelativePath": "Eventos/EditarEvento/{idEvento}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEvento",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "eventoAtualizado",
+        "Type": "PassaIngressos_WebAPI.Dto.EventoDto",
         "IsRequired": true
       }
     ],
@@ -155,13 +298,13 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
     "Method": "ExcluirEvento",
-    "RelativePath": "Eventos/ExcluirEvento/{id}",
+    "RelativePath": "Eventos/ExcluirEvento/{idEvento}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idEvento",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -171,14 +314,56 @@
   {
     "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
     "Method": "ExcluirIngresso",
-    "RelativePath": "Eventos/ExcluirIngresso/{id}",
+    "RelativePath": "Eventos/ExcluirIngresso/{idIngresso}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "idIngresso",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "ListarEventos",
+    "RelativePath": "Eventos/ListarEventos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "PesquisarEvento",
+    "RelativePath": "Eventos/PesquisarEvento/{idEvento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEvento",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PassaIngressos_WebAPI.Controllers.EventosController",
+    "Method": "VenderIngresso",
+    "RelativePath": "Eventos/VenderIngresso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingressoDto",
+        "Type": "PassaIngressos_WebAPI.Dto.IngressoDto",
         "IsRequired": true
       }
     ],

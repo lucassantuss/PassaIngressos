@@ -52,6 +52,6 @@ INSERT INTO venda.Evento (Nome_Evento, Local_Evento, Data_Hora_Evento, Id_Arquiv
 ('Feira de Tecnologia', 'Centro de Convenções ABC', CONVERT(datetime, '2024-10-01 10:00:00', 120), 2);
 
 -- venda.Ingresso
-INSERT INTO venda.Ingresso (Id_Tg_Tipo_Ingresso, Valor, Id_Pessoa_Anunciante, Id_Pessoa_Comprador, Id_Evento) VALUES 
-(2, 250.00, 1, 2, 1), 
-(1, 500.00, 2, 1, 2);
+INSERT INTO venda.Ingresso (Id_Tg_Tipo_Ingresso, Valor, Id_Pessoa_Anunciante, Id_Evento) VALUES 
+(2, 250.00, 1, 1), 
+(1, 500.00, 2, 2);
