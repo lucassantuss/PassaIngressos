@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r/vPDdDOMfI=",
+  "dgSpecHash": "kMdEPg42CAQ=",
   "success": true,
   "projectFilePath": "C:\\GITHUB\\PassaIngressos\\Application\\Back-End\\PassaIngressos_WebAPI.Tests\\PassaIngressos_WebAPI.Tests.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.33\\microsoft.entityframeworkcore.6.0.33.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.33\\microsoft.entityframeworkcore.abstractions.6.0.33.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.33\\microsoft.entityframeworkcore.analyzers.6.0.33.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.33\\microsoft.entityframeworkcore.inmemory.6.0.33.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.33\\microsoft.entityframeworkcore.relational.6.0.33.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.33\\microsoft.entityframeworkcore.sqlserver.6.0.33.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

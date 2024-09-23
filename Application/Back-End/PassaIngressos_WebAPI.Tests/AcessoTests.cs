@@ -1,68 +1,43 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PassaIngressos_WebAPI.Controllers;
 using PassaIngressos_WebAPI.Database;
 using PassaIngressos_WebAPI.Dto;
 using PassaIngressos_WebAPI.Entity;
-using Moq;
 
 namespace PassaIngressos_WebAPI.Tests
 {
     public class AcessoTests
     {
-        private readonly Mock<DbPassaIngressos> _mockContext;
+        private readonly DbPassaIngressos _context;
         private readonly AcessoController _controller;
 
         public AcessoTests()
         {
-            _mockContext = new Mock<DbPassaIngressos>();
-            _controller = new AcessoController(_mockContext.Object);
+            // Configura o DbContext para usar o banco de dados em memória
+            var options = new DbContextOptionsBuilder<DbPassaIngressos>()
+                .UseInMemoryDatabase(databaseName: "TestDatabase")
+                .Options;
+
+            _context = new DbPassaIngressos(options);
+            _controller = new AcessoController(_context);
         }
-
-        //[Fact]
-        //public async Task Login_RetornaOk_QuandoAsCredenciaisForemValidas()
-        //{
-        //    // Arrange
-        //    var loginDto = new LoginDto { Login = "user1", Senha = "password" };
-        //    var usuario = new Usuario { Login = "user1", Senha = BCrypt.Net.BCrypt.HashPassword("password") };
-        //    _mockContext.Setup(c => c.Usuarios.SingleOrDefaultAsync(It.IsAny<Expression<Func<Usuario, bool>>>()))
-        //                .ReturnsAsync(usuario);
-
-        //    // Act
-        //    var result = await _controller.Login(loginDto);
-
-        //    // Assert
-        //    Assert.IsType<OkObjectResult>(result);
-        //    var okResult = result as OkObjectResult;
-        //    Assert.Equal("Login realizado com sucesso.", okResult.Value);
-        //}
-
-        //[Fact]
-        //public async Task Login_RetornaNaoAutorizado_QuandoAsCredenciaisForemInvalidas()
-        //{
-        //    // Arrange
-        //    var loginDto = new LoginDto { Login = "user1", Senha = "password" };
-        //    var usuario = new Usuario { Login = "user1", Senha = BCrypt.Net.BCrypt.HashPassword("password") };
-
-        //    // Mock do retorno do usuário ao buscar pelo login
-        //    _mockContext.Setup(c => c.Usuarios
-        //        .SingleOrDefaultAsync(It.Is<Expression<Func<Usuario, bool>>>(expr =>
-        //            expr.Body.ToString().Contains("user1")))
-        //    ).ReturnsAsync(usuario);
-
-        //    // Act
-        //    var result = await _controller.Login(loginDto);
-
-        //    // Assert
-        //    Assert.IsType<OkObjectResult>(result);
-        //    var okResult = result as OkObjectResult;
-        //    Assert.Equal("Login realizado com sucesso.", okResult.Value);
-        //}
 
         [Fact]
         public async Task CriarUsuario_RetornaOk_QuandoUsuarioForCriado()
         {
             // Arrange
-            var usuarioDto = new UsuarioDto { Login = "newuser", Senha = "password", NomePessoa = "New User" };
+            var usuarioDto = new UsuarioDto 
+            { 
+                Login = "newuser", 
+                Senha = "password", 
+
+                NomePessoa = "New User",
+                CPF = "123.456.789-10",
+                RG = "12.345.678-9",
+                IdArquivoFoto = 0,
+                IdTgSexo = 0,
+            };
 
             // Act
             var result = await _controller.CriarUsuario(usuarioDto);
@@ -77,8 +52,15 @@ namespace PassaIngressos_WebAPI.Tests
         public async Task RemoverUsuario_RetornaOk_QuandoUsuarioForRemovido()
         {
             // Arrange
-            var usuario = new Usuario { IdUsuario = 1, Login = "userToDelete" };
-            _mockContext.Setup(c => c.Usuarios.FindAsync(1)).ReturnsAsync(usuario);
+            var usuario = new Usuario 
+            { 
+                IdUsuario = 1, 
+                Login = "UsuarioParaRemover", 
+                Senha = "SenhaDoUsuarioRemovido" 
+            };
+                        
+            await _context.Usuarios.AddAsync(usuario);
+            await _context.SaveChangesAsync();
 
             // Act
             var result = await _controller.ExcluirConta(1);
@@ -91,9 +73,6 @@ namespace PassaIngressos_WebAPI.Tests
         [Fact]
         public async Task RemoverUsuario_RetornaNaoEncontrado_QuandoUsuarioNaoExistir()
         {
-            // Arrange
-            _mockContext.Setup(c => c.Usuarios.FindAsync(1)).ReturnsAsync((Usuario)null);
-
             // Act
             var result = await _controller.ExcluirConta(1);
 
@@ -107,7 +86,7 @@ namespace PassaIngressos_WebAPI.Tests
         public async Task CriarPerfil_RetornaOk_QuandoPerfilForCriado()
         {
             // Arrange
-            var perfilDto = new PerfilDto { NomePerfil = "NewProfile", DescricaoPerfil = "Description" };
+            var perfilDto = new PerfilDto { NomePerfil = "NovoPerfil", DescricaoPerfil = "DescricaoDoPerfil" };
 
             // Act
             var result = await _controller.CriarPerfil(perfilDto);
@@ -115,15 +94,22 @@ namespace PassaIngressos_WebAPI.Tests
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result);
             var createdPerfil = Assert.IsAssignableFrom<Perfil>(okResult.Value);
-            Assert.Equal("NewProfile", createdPerfil.NomePerfil);
+            Assert.Equal("NovoPerfil", createdPerfil.NomePerfil);
         }
 
         [Fact]
         public async Task RemoverPerfil_RetornaOk_QuandoPerfilForRemovido()
         {
             // Arrange
-            var perfil = new Perfil { IdPerfil = 1, NomePerfil = "ProfileToDelete" };
-            _mockContext.Setup(c => c.Perfis.FindAsync(1)).ReturnsAsync(perfil);
+            var perfil = new Perfil 
+            { 
+                IdPerfil = 1, 
+                NomePerfil = "PerfilParaRemover", 
+                DescricaoPerfil = "Perfil a ser excluído" 
+            };
+            
+            await _context.Perfis.AddAsync(perfil);
+            await _context.SaveChangesAsync();
 
             // Act
             var result = await _controller.RemoverPerfil(1);
@@ -136,9 +122,6 @@ namespace PassaIngressos_WebAPI.Tests
         [Fact]
         public async Task RemoverPerfil_RetornaNaoEncontrado_QuandoPerfilNaoExistir()
         {
-            // Arrange
-            _mockContext.Setup(c => c.Perfis.FindAsync(1)).ReturnsAsync((Perfil)null);
-
             // Act
             var result = await _controller.RemoverPerfil(1);
 

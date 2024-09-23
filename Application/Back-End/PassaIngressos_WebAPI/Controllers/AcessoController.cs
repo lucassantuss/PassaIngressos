@@ -151,7 +151,11 @@ namespace PassaIngressos_WebAPI.Controllers
             // Cria Pessoa que será associada ao Usuário
             var pessoa = new Pessoa()
             {
-                Nome = usuarioDto.NomePessoa
+                Nome = usuarioDto.NomePessoa,
+                CPF = usuarioDto.CPF,
+                RG = usuarioDto.RG,
+                IdArquivoFoto = usuarioDto.IdArquivoFoto ?? 0,
+                IdTgSexo = usuarioDto.IdTgSexo ?? 0
             };
 
             _dbPassaIngressos.Pessoas.Add(pessoa);

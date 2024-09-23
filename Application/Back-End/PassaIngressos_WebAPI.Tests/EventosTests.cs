@@ -4,22 +4,23 @@ using PassaIngressos_WebAPI.Controllers;
 using PassaIngressos_WebAPI.Database;
 using PassaIngressos_WebAPI.Dto;
 using PassaIngressos_WebAPI.Entity;
-using System.Linq.Expressions;
-using Moq;
 
 namespace PassaIngressos_WebAPI.Tests
 {
     public class EventosTests
     {
-        private readonly Mock<DbPassaIngressos> _mockContext;
-        private readonly Mock<DbSet<Evento>> _mockSet;
+        private readonly DbPassaIngressos _context;
         private readonly EventosController _controller;
 
         public EventosTests()
         {
-            _mockContext = new Mock<DbPassaIngressos>();
-            _mockSet = new Mock<DbSet<Evento>>();
-            _controller = new EventosController(_mockContext.Object);
+            // Configura o DbContext para usar o banco de dados em memória
+            var options = new DbContextOptionsBuilder<DbPassaIngressos>()
+                .UseInMemoryDatabase(databaseName: "TestDatabase")
+                .Options;
+
+            _context = new DbPassaIngressos(options);
+            _controller = new EventosController(_context);
         }
 
         [Fact]
@@ -33,18 +34,13 @@ namespace PassaIngressos_WebAPI.Tests
                 DataHoraEvento = DateTime.Now.AddMonths(1)
             };
 
-            _mockContext.Setup(m => m.Eventos).Returns(_mockSet.Object);
-
             // Act
             var result = await _controller.CriarEvento(eventoDto);
 
             // Assert
-            Assert.IsType<OkObjectResult>(result);
-            var okResult = result as OkObjectResult;
-            Assert.NotNull(okResult.Value);
-
-            _mockSet.Verify(m => m.Add(It.IsAny<Evento>()), Times.Once);
-            _mockContext.Verify(m => m.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var eventoCriado = Assert.IsAssignableFrom<Evento>(okResult.Value);
+            Assert.Equal("Show de Rock", eventoCriado.NomeEvento);
         }
 
         [Fact]
@@ -53,11 +49,13 @@ namespace PassaIngressos_WebAPI.Tests
             // Arrange
             var eventoExistente = new Evento
             {
-                IdEvento = 1,
+                IdEvento = 6,
                 NomeEvento = "Show de Rock",
-                LocalEvento = "Estádio",
+                LocalEvento = "Rio de Janeiro",
                 DataHoraEvento = DateTime.Now.AddMonths(1)
             };
+            await _context.Eventos.AddAsync(eventoExistente);
+            await _context.SaveChangesAsync();
 
             var eventoAtualizado = new EventoDto
             {
@@ -66,18 +64,13 @@ namespace PassaIngressos_WebAPI.Tests
                 DataHoraEvento = DateTime.Now.AddMonths(2)
             };
 
-            _mockContext.Setup(m => m.Eventos.FindAsync(1))
-                        .ReturnsAsync(eventoExistente);
-
             // Act
-            var result = await _controller.EditarEvento(1, eventoAtualizado);
+            var result = await _controller.EditarEvento(6, eventoAtualizado);
 
             // Assert
             Assert.IsType<OkObjectResult>(result);
-            var okResult = result as OkObjectResult;
-            Assert.NotNull(okResult.Value);
-            Assert.Equal(eventoAtualizado.NomeEvento, eventoExistente.NomeEvento);
-            _mockContext.Verify(m => m.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
+            Assert.Equal("Show de Pop", eventoExistente.NomeEvento);
+            Assert.Equal("Arena", eventoExistente.LocalEvento);
         }
 
         [Fact]
@@ -86,45 +79,41 @@ namespace PassaIngressos_WebAPI.Tests
             // Arrange
             var eventoExistente = new Evento
             {
-                IdEvento = 1,
-                NomeEvento = "Show de Rock"
+                IdEvento = 3,
+                NomeEvento = "Show de Rock",
+                LocalEvento = "Rio de Janeiro"
             };
-
-            _mockContext.Setup(m => m.Eventos.FindAsync(1))
-                        .ReturnsAsync(eventoExistente);
+            await _context.Eventos.AddAsync(eventoExistente);
+            await _context.SaveChangesAsync();
 
             // Act
-            var result = await _controller.ExcluirEvento(1);
+            var result = await _controller.ExcluirEvento(3);
 
             // Assert
             Assert.IsType<OkObjectResult>(result);
-            _mockSet.Verify(m => m.Remove(It.IsAny<Evento>()), Times.Once);
-            _mockContext.Verify(m => m.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
+            Assert.Equal("Evento excluído com sucesso.", (result as OkObjectResult).Value);
         }
 
         [Fact]
         public async Task ListarEventos_RetornaOk_QuandoExistemEventos()
         {
             // Arrange
+            await _controller.ExcluirEvento(1); // Excluir evento de outros testes anteriores
+
             var eventos = new List<Evento>
-        {
-            new Evento { IdEvento = 1, NomeEvento = "Show de Rock" },
-            new Evento { IdEvento = 2, NomeEvento = "Show de Jazz" }
-        }.AsQueryable();
+            {
+                new Evento { IdEvento = 2, NomeEvento = "Show de Rock", LocalEvento = "Rio de Janeiro" },
+                new Evento { IdEvento = 3, NomeEvento = "Show de Jazz", LocalEvento = "São Paulo" }
+            };
 
-            _mockSet.As<IQueryable<Evento>>().Setup(m => m.Provider).Returns(eventos.Provider);
-            _mockSet.As<IQueryable<Evento>>().Setup(m => m.Expression).Returns(eventos.Expression);
-            _mockSet.As<IQueryable<Evento>>().Setup(m => m.ElementType).Returns(eventos.ElementType);
-            _mockSet.As<IQueryable<Evento>>().Setup(m => m.GetEnumerator()).Returns(eventos.GetEnumerator());
-
-            _mockContext.Setup(m => m.Eventos).Returns(_mockSet.Object);
+            await _context.Eventos.AddRangeAsync(eventos);
+            await _context.SaveChangesAsync();
 
             // Act
             var result = await _controller.ListarEventos();
 
             // Assert
-            Assert.IsType<OkObjectResult>(result);
-            var okResult = result as OkObjectResult;
+            var okResult = Assert.IsType<OkObjectResult>(result);
             var listaEventos = Assert.IsType<List<Evento>>(okResult.Value);
             Assert.Equal(2, listaEventos.Count);
         }
@@ -135,29 +124,21 @@ namespace PassaIngressos_WebAPI.Tests
             // Arrange
             var evento = new Evento
             {
-                IdEvento = 1,
+                IdEvento = 5,
                 NomeEvento = "Show de Rock",
-                LocalEvento = "Estádio"
+                LocalEvento = "Rio de Janeiro"
             };
 
-            var eventos = new List<Evento> { evento }.AsQueryable();
-
-            // Configura o mock do DbSet para se comportar como IQueryable
-            _mockSet.As<IQueryable<Evento>>().Setup(m => m.Provider).Returns(eventos.Provider);
-            _mockSet.As<IQueryable<Evento>>().Setup(m => m.Expression).Returns(eventos.Expression);
-            _mockSet.As<IQueryable<Evento>>().Setup(m => m.ElementType).Returns(eventos.ElementType);
-            _mockSet.As<IQueryable<Evento>>().Setup(m => m.GetEnumerator()).Returns(eventos.GetEnumerator());
-
-            _mockContext.Setup(m => m.Eventos).Returns(_mockSet.Object);
+            await _context.Eventos.AddAsync(evento);
+            await _context.SaveChangesAsync();
 
             // Act
-            var result = await _controller.PesquisarEvento(1);
+            var result = await _controller.PesquisarEvento(5);
 
             // Assert
             Assert.IsType<OkObjectResult>(result);
-            var okResult = result as OkObjectResult;
-            var eventoRetornado = Assert.IsType<Evento>(okResult.Value);
-            Assert.Equal(1, eventoRetornado.IdEvento);
+            var eventoRetornado = Assert.IsType<Evento>((result as OkObjectResult).Value);
+            Assert.Equal(5, eventoRetornado.IdEvento);
         }
     }
 }
