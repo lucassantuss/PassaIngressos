@@ -1,0 +1,11 @@
+Deploy - Como colocar um sistema em produção de forma simples - dotNet Core
+> https://www.youtube.com/watch?v=y8Y4ln_Hgqo
+
+COMO PUBLICAR SUA API NO AZURE
+> https://www.youtube.com/watch?v=_V5_zc1Y8MI
+
+Easily Deploy a .NET 7 API to Azure!
+> https://www.youtube.com/watch?v=EKqXAMLsnKQ
+
+Azure App Service in 15 MINUTES | Web App Tutorial
+> https://www.youtube.com/watch?v=5jOvVY1G62U

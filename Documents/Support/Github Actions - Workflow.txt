@@ -1,0 +1,17 @@
+CI/CD Tutorial using GitHub Actions - Automated Testing & Automated Deployments
+> https://www.youtube.com/watch?v=YLtlz88zrLg
+
+Criando um Workflow AUTOMATIZADO de CI com o Github Actions
+> https://www.youtube.com/watch?v=F51HlrEeedw
+
+Github Actions CI/CD - Everything you need to know to get started
+> https://www.youtube.com/watch?v=mFFXuXjVgkU
+
+How to start a CI pipeline with Actions
+> https://www.youtube.com/watch?v=5MJRtldPOEI
+
+How to Automatically Keep Your Branches Synced with GitHub Actions
+> https://www.youtube.com/watch?v=tKcC7B_imqw
+
+Running GitHub Actions CI/CD triggers on specific branches
+> https://www.youtube.com/watch?v=5pgCHx91Hqw
