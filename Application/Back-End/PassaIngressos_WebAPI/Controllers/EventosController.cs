@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PassaIngressos_WebAPI.Database;
-using PassaIngressos_WebAPI.Dto;
 using PassaIngressos_WebAPI.Entity;
+using PassaIngressos_WebAPI.Dto;
 
 namespace PassaIngressos_WebAPI.Controllers
 {
@@ -10,12 +10,16 @@ namespace PassaIngressos_WebAPI.Controllers
     [ApiController]
     public class EventosController : ControllerBase
     {
+        #region Contexto e Variáveis
+
         private readonly DbPassaIngressos _dbPassaIngressos;
 
         public EventosController(DbPassaIngressos _context)
         {
             _dbPassaIngressos = _context;
         }
+
+        #endregion
 
         #region Evento
 

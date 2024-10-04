@@ -1,10 +1,8 @@
-import FormContato from "components/FormContato";
-import styles from "./Sobre.module.css"
+import styles from './FormContato.module.css';
 
-export default function Sobre() {
+export default function FormContato() {
     return (
         <div className={styles.aboutContainer}>
-            <div class="row">
             <div className={styles.textContainer}>
                 <h1>Sobre</h1>
                 <p>A Passa Ingressos é uma startup brasileira, com o intuito de facilitar a revenda e compra de ingressos para eventos por meio de uma plataforma que possa conectar as pessoas.</p>
@@ -14,8 +12,7 @@ export default function Sobre() {
                     <li>Lucas Araujo dos Santos</li>
                     <li>Renan Cesar de Araujo</li>
                 </ul>
-                <p>Caso haja alguma dúvida, ou sugestão de melhoria para o software, fique a vontade para entrar em contato conosco!!</p>
-            </div>
+                <p>Caso haja alguma dúvida, ou sugestão de melhoria para o software, fique à vontade para entrar em contato conosco!!</p>
             </div>
 
             <div className={styles.imageContainer}>
@@ -27,8 +24,12 @@ export default function Sobre() {
                     <img src='/images/groupMembers/lucas.jpg' alt="Lucas Araujo dos Santos" width="250px" height="250px" />
                 </div>
             </div>
+
             <br />
-            <FormContato />
+
+            <div className={styles.formContainer}>
+                <FormContato />
+            </div>
         </div>
     );
 }
