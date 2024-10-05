@@ -1,25 +1,29 @@
-import "./ProximosEventos.module.css";
+import ProximoEventoCard from 'components/ProximoEventoCard';
+import styles from './ProximosEventos.module.css';
 
 function ProximosEventos() {
   return (
-    <div className="events">
+    <div className={styles.events}>
       <h2>Próximos eventos</h2>
 
-      <div className="event-list">
-        <div className="event">
-          <img src="https://github.com/lucassantuss.png" alt="The Weeknd" />
-          <p className="event-year">2024</p>
-        </div>
+      <div className={styles.eventList}>
+        <ProximoEventoCard
+          imageUrl="/images/events/The-Weeknd-2024.jpg"
+          title="The Weeknd"
+          year="2024"
+        />
 
-        <div className="event">
-          <img src="https://github.com/lucassantuss.png" alt="Travis Scott" />
-          <p className="event-year">2024</p>
-        </div>
+        <ProximoEventoCard
+          imageUrl="/images/events/Travis-Scott-2024.png"
+          title="Travis Scott"
+          year="2024"
+        />
 
-        <div className="event">
-          <img src="https://github.com/lucassantuss.png" alt="Bruno Mars" />
-          <p className="event-year">2024</p>
-        </div>
+        <ProximoEventoCard
+          imageUrl="/images/events/Bruno-Mars-2024.png"
+          title="Bruno Mars"
+          year="2024"
+        />
       </div>
     </div>
   );

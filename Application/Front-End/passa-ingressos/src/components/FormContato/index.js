@@ -27,9 +27,9 @@ export default function FormContato() {
 
             <br />
 
-            <div className={styles.formContainer}>
-                <FormContato />
-            </div>
+            {/* <div className={styles.formContainer}> */}
+                {/* <FormContato /> */}
+            {/* </div> */}
         </div>
     );
 }

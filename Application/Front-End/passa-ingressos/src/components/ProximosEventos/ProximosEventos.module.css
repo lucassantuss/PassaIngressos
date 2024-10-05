@@ -1,7 +1,6 @@
 .events {
   padding: 20px;
   background-color: #fff;
-  text-align: left;
 }
 
 h2 {
@@ -10,32 +9,8 @@ h2 {
   color: #333;
 }
 
-.event-list {
+.eventList {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
-  justify-content: flex-start;
-}
-
-.event {
-  width: 150px;
-  text-align: left;
-}
-
-.event img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.event-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  margin-top: 10px;
-}
-
-.event-year {
-  font-size: 14px;
-  color: #777;
-  margin-top: 4px;
 }

@@ -1,16 +1,27 @@
-import "./SegurancaVendas.module.css";
+import styles from './SegurancaVendas.module.css';
 
 function SegurancaVendas() {
   return (
-    <div className="security">
-      <h2>Segurança nas vendas!</h2>
-      
-      <div className="security-content">
-        <p>Dinheiro + rápido: Revenda o seu ingresso que não irá usar e receba na hora.</p>
-        <p>100% seguro: Sem chance de fraude! Com transações feitas diretamente no site.</p>
-        <p>+ chances de ir ao evento: Encontre pessoas que estão revendendo os ingressos.</p>
+    <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h2>Segurança nas vendas!</h2>
+        <div className={styles.securityContent}>
+          <br/>
+          <p><strong>Dinheiro + rápido</strong></p>
+          <p>Revenda o seu ingresso que não irá usar e receba na hora.</p>
+          <br/>
+          <p><strong>100% seguro</strong></p>
+          <p>Sem chance de fraude! Com transações feitas diretamente no site.</p>
+          <br/>
+          <p><strong>+ chances de ir ao evento</strong></p>
+          <p>Encontre pessoas que estão revendendo os ingressos.</p>
+          <br/>
+        </div>
+        <button className={styles.sellButton}>Vender Ingresso</button>
       </div>
-      <button>Vender Ingresso</button>
+      <div className={styles.imageContainer}>
+        <img src="/images/banners/seguranca-vendas.jpg" alt="Segurança nas Vendas" className={styles.securityImage} />
+      </div>
     </div>
   );
 }

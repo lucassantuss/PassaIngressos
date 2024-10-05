@@ -12,6 +12,7 @@ import NaoEncontrada from "../pages/NaoEncontrada"
 
 import PrivateRoutes from "./PrivateRoutes";
 import { AuthProvider } from "context/AuthContext";
+import VenderIngresso from "pages/VenderIngresso";
 
 function AppRoutes() {
   return (
@@ -23,6 +24,7 @@ function AppRoutes() {
           <Route path="/" element={<PaginaPadrao />}>
             <Route index element={<Inicio />} />
 
+            <Route path="vender-ingresso" element={<VenderIngresso />} />
             <Route path="eventos" element={<Eventos />} />
             <Route path="como-funciona" element={<ComoFunciona />} />
             <Route path="sobre" element={<Sobre />} />

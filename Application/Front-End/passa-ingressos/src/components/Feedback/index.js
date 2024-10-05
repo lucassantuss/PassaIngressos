@@ -1,25 +1,30 @@
-import "./Feedback.module.css";
+import FeedbackCard from 'components/FeedbackCard';
+import styles from './Feedback.module.css';
 
 function Feedback() {
   return (
-    <div className="feedback">
+    <div className={styles.feedback}>
       <h2>Feedback dos Usuários</h2>
 
-      <div className="feedback-list">
-        <div className="feedback-item">
-          <p>"Muito bom, consegui vender meu ingresso!"</p>
-          <span>- Rafael, 27 anos</span>
-        </div>
-
-        <div className="feedback-item">
-          <p>"Top!! Comprei o ingresso pro show do The Weeknd e deu tudo certo!"</p>
-          <span>- Aline, 22 anos</span>
-        </div>
-        
-        <div className="feedback-item">
-          <p>"Fácil e seguro, nem precisei conversar com ninguém para vender meu ingresso"</p>
-          <span>- Maria, 32 anos</span>
-        </div>
+      <div className={styles.feedbackList}>
+        <FeedbackCard
+          feedback="Muito bom, consegui vender meu ingresso!"
+          name="Danilo"
+          age={27}
+          imgSrc='/images/groupMembers/danilo.jpg'
+        />
+        <FeedbackCard
+          feedback="Top!! Comprei o ingresso pro show do The Weeknd e deu tudo certo!"
+          name="Renan"
+          age={22}
+          imgSrc='/images/groupMembers/renan.jpg'
+        />
+        <FeedbackCard
+          feedback="Fácil e seguro, nem precisei conversar com ninguém para vender meu ingresso"
+          name="Lucas"
+          age={22}
+          imgSrc='/images/groupMembers/lucas.jpg'
+        />
       </div>
     </div>
   );

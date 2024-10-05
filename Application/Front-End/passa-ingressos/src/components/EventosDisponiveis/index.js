@@ -1,5 +1,6 @@
 import EventoCard from 'components/EventoCard';
 import styles from './EventosDisponiveis.module.css';
+import BarraPesquisa from 'components/BarraPesquisa';
 
 const EventosDisponiveis = ( { title, subtitle, urlImage }) => {
   const eventos = [
@@ -25,14 +26,8 @@ const EventosDisponiveis = ( { title, subtitle, urlImage }) => {
         <div className={styles.overlay}>
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.subtitle}>{subtitle}</p>
-          <div className={styles.searchBox}>
-            <input
-              type="text"
-              placeholder="Digite o nome do evento.."
-              className={styles.searchInput}
-            />
-            <button className={styles.searchButton}>Pesquisar</button>
-          </div>
+          
+          <BarraPesquisa placeholder="Digite o nome do evento.."/>
         </div>
       </div>
 
