@@ -34,8 +34,8 @@ CREATE TABLE core.Pessoa (
     Nome VARCHAR(100) NOT NULL,
     Id_Tg_Sexo INT NULL,
     Data_Nascimento DATE NULL,
-    CPF VARCHAR(11) NULL,
-    RG VARCHAR(15) NULL,
+    CPF VARCHAR(20) NULL,
+    RG VARCHAR(20) NULL,
     Id_Arquivo_Foto INT NULL,
     CONSTRAINT FK_Id_Tg_Sexo FOREIGN KEY (Id_Tg_Sexo) REFERENCES core.Item_Tabela_Geral(Id_Item_Tabela_Geral),
     CONSTRAINT FK_Id_Arquivo_Foto FOREIGN KEY (Id_Arquivo_Foto) REFERENCES core.Arquivo(Id_Arquivo)
@@ -83,9 +83,12 @@ CREATE TABLE venda.Ingresso (
     Id_Ingresso INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
     Id_Tg_Tipo_Ingresso INT NOT NULL,
     Valor DECIMAL(10, 2) NULL,
+    Vendido BIT NULL,
     Id_Pessoa_Anunciante INT NOT NULL,
+    Id_Pessoa_Comprador INT NULL,
     Id_Evento INT NOT NULL,
     CONSTRAINT FK_Ingresso_Tipo_Ingresso FOREIGN KEY (Id_Tg_Tipo_Ingresso) REFERENCES core.Item_Tabela_Geral(Id_Item_Tabela_Geral),
     CONSTRAINT FK_Ingresso_Anunciante FOREIGN KEY (Id_Pessoa_Anunciante) REFERENCES core.Pessoa(Id_Pessoa),
+    CONSTRAINT FK_Ingresso_Comprador FOREIGN KEY (Id_Pessoa_Comprador) REFERENCES core.Pessoa(Id_Pessoa),
     CONSTRAINT FK_Ingresso_Evento FOREIGN KEY (Id_Evento) REFERENCES venda.Evento(Id_Evento)
 );
