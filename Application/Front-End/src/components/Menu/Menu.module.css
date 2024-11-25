@@ -1,0 +1,96 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+}
+
+.menuLogo {
+  display: flex;
+  align-items: center;
+}
+
+.menuToggle {
+  display: none;
+}
+
+.menuItens {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItens li {
+  margin: 0 20px;
+}
+
+.menuLink {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  transition: color 0.3s;
+  touch-action: none;
+}
+
+.menuLink:hover {
+  color: gray;
+}
+
+.menuLogin {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  touch-action: none;
+}
+
+.menuLogin:hover {
+  background-color: gray;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 20px 30px;
+  }
+  
+  .menuItens {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .menuItens.active {
+    display: flex;
+  }
+
+  .menuItens li {
+    margin: 10px 0;
+  }
+
+  .menuLogin {
+    padding: 5px 10px;
+  }
+
+  .toggleButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

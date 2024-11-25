@@ -89,6 +89,5 @@ CREATE TABLE venda.Ingresso (
     Id_Evento INT NOT NULL,
     CONSTRAINT FK_Ingresso_Tipo_Ingresso FOREIGN KEY (Id_Tg_Tipo_Ingresso) REFERENCES core.Item_Tabela_Geral(Id_Item_Tabela_Geral),
     CONSTRAINT FK_Ingresso_Anunciante FOREIGN KEY (Id_Pessoa_Anunciante) REFERENCES core.Pessoa(Id_Pessoa),
-    CONSTRAINT FK_Ingresso_Comprador FOREIGN KEY (Id_Pessoa_Comprador) REFERENCES core.Pessoa(Id_Pessoa),
     CONSTRAINT FK_Ingresso_Evento FOREIGN KEY (Id_Evento) REFERENCES venda.Evento(Id_Evento)
 );

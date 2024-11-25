@@ -1,0 +1,15 @@
+.proximosEventosContainer {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.proximosEventosList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.proximosEventosList a {
+  text-decoration: none;
+}

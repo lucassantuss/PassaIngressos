@@ -53,5 +53,5 @@ INSERT INTO venda.Evento (Nome_Evento, Local_Evento, Data_Hora_Evento, Id_Arquiv
 
 -- venda.Ingresso
 INSERT INTO venda.Ingresso (Id_Tg_Tipo_Ingresso, Valor, Vendido, Id_Pessoa_Anunciante, Id_Pessoa_Comprador, Id_Evento) VALUES 
-(2, 250.00, 0, 1, null, 1), 
-(1, 500.00, 0, 2, null, 2);
+(2, 250.00, 0, 1, NULL, 1), 
+(1, 500.00, 0, 2, NULL, 2);
