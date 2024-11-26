@@ -1,0 +1,26 @@
+Published Link (Vercel)
+https://passa-ingressos.vercel.app/
+
+GitHub - Back-End (WebAPI - C#, .NET 6)
+https://github.com/lucassantuss/PassaIngressos_WebAPI
+
+GitHub - Front-End (SPA - React)
+https://github.com/lucassantuss/PassaIngressos_SPA
+
+Swagger Published API Production
+https://passa-ingressos.azurewebsites.net/swagger/index.html
+
+Swagger Published API Development
+https://passa-ingressos-dev.azurewebsites.net/swagger/index.html
+
+Pitch (Canva)
+https://www.canva.com/design/DAGWKklpnY8/a9tZHoIZoHYUWwmCDxQIUQ/view
+
+Software Quality Presentation - Canva
+https://www.canva.com/design/DAGU9LpiPWg/nT0DZsIJlnD2zClpaEN7fQ/view
+
+Trello
+https://trello.com/b/UE1kl3yi/passa-ingressos
+
+Figma
+https://www.figma.com/design/gebBhyJ3KjlIXjKnCxdash/Passa-Ingressos
