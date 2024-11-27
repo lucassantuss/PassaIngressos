@@ -14,22 +14,22 @@
 <h2 id="layout">🎨 Layout</h2>
 
 <p align="center">
-    <img src="./assets/img/pages/page01.png" alt="Page 1" width="460px">
-    <img src="./assets/img/pages/page02.png" alt="Page 2" width="460px">
-    <img src="./assets/img/pages/page03.png" alt="Page 3" width="460px">
-    <img src="./assets/img/pages/page04.png" alt="Page 4" width="460px">
-    <img src="./assets/img/pages/page05.png" alt="Page 5" width="460px">
-    <img src="./assets/img/pages/page06.png" alt="Page 6" width="460px">
-    <img src="./assets/img/pages/page07.png" alt="Page 7" width="460px">
-    <img src="./assets/img/pages/page08.png" alt="Page 8" width="460px">
-    <img src="./assets/img/pages/page09.png" alt="Page 9" width="460px">
-    <img src="./assets/img/pages/page10.png" alt="Page 10" width="460px">
-    <img src="./assets/img/pages/page11.png" alt="Page 11" width="460px">
-    <img src="./assets/img/pages/page12.png" alt="Page 12" width="460px">
-    <img src="./assets/img/pages/page13.png" alt="Page 13" width="460px">
-    <img src="./assets/img/pages/page14.png" alt="Page 14" width="460px">
-    <img src="./assets/img/pages/page15.png" alt="Page 15" width="460px">
-    <img src="./assets/img/pages/page16.png" alt="Page 16" width="460px">
+    <img src="./assets/img/pages/page01.png" alt="Page 1" width="400px">
+    <img src="./assets/img/pages/page02.png" alt="Page 2" width="400px">
+    <img src="./assets/img/pages/page03.png" alt="Page 3" width="400px">
+    <img src="./assets/img/pages/page04.png" alt="Page 4" width="400px">
+    <img src="./assets/img/pages/page05.png" alt="Page 5" width="400px">
+    <img src="./assets/img/pages/page06.png" alt="Page 6" width="400px">
+    <img src="./assets/img/pages/page07.png" alt="Page 7" width="400px">
+    <img src="./assets/img/pages/page08.png" alt="Page 8" width="400px">
+    <img src="./assets/img/pages/page09.png" alt="Page 9" width="400px">
+    <img src="./assets/img/pages/page10.png" alt="Page 10" width="400px">
+    <img src="./assets/img/pages/page11.png" alt="Page 11" width="400px">
+    <img src="./assets/img/pages/page12.png" alt="Page 12" width="400px">
+    <img src="./assets/img/pages/page13.png" alt="Page 13" width="400px">
+    <img src="./assets/img/pages/page14.png" alt="Page 14" width="400px">
+    <img src="./assets/img/pages/page15.png" alt="Page 15" width="400px">
+    <img src="./assets/img/pages/page16.png" alt="Page 16" width="400px">
 </p>
 
 <h2 id="tech">💻 Technologies</h2>
