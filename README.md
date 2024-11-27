@@ -11,6 +11,10 @@
     <b>Ticket resale software using React, C#, .NET Core 6, REST API, JWT, SQL Server, Azure, CI/CD, GitHub Actions</b>
 </p>
 
+<p align="center">
+     <a href="https://passa-ingressos.vercel.app/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mobile%20Phone%20with%20Arrow.png" alt="Mobile Phone with Arrow" width="20" height="20" /> Visit this Project</a>
+</p>
+
 <h2 id="layout">🎨 Layout</h2>
 
 <p align="center">
