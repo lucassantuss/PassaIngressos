@@ -1,0 +1,105 @@
+.eventoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 30px;
+  margin: 40px;
+}
+
+.imagemEventoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.imagemEvento {
+  max-width: 500px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.infoEventoContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.tituloEvento {
+  font-size: 2.5rem;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.detalhesEvento {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+}
+
+.linhaEvento {
+  margin-bottom: 20px;
+}
+
+.linhaEvento label {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.linhaEvento span {
+  font-size: 18px;
+}
+
+.linhaEvento .campoSelect {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.botaoAdicionar {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.botaoAdicionar:hover {
+  background-color: #333;
+}
+
+@media (max-width: 1024px) {
+  .eventoContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .infoEventoContainer {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .imagemEvento {
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .detalhesEvento {
+    margin-right: 0;
+  }
+}

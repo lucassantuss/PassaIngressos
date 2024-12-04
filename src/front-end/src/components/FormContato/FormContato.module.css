@@ -1,0 +1,63 @@
+.formContatoContainer {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.formContatoContainer:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.formContato {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContatoGroup {
+  padding: 10px 22px 10px 0px;
+  margin: 0px;
+}
+
+.formContatoGroup label {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formContatoGroup input,
+.formContatoGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: Arial;
+  font-size: 18px;
+  margin-top: 10px;
+  resize: none;
+  touch-action: none;
+}
+
+.formContatoGroup input::placeholder,
+.formContatoGroup textarea::placeholder {
+  color: #aaa;
+}
+
+.botaoEnviarFormContato {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  touch-action: none;
+}
+
+.botaoEnviarFormContato:hover {
+  background-color: #333;
+}

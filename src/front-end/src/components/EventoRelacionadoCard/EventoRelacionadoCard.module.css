@@ -1,0 +1,52 @@
+.cardRelacionadoContainer {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.cardRelacionadoContainer:hover {
+  transform: scale(1.05);
+}
+
+.eventImageCardRelacionado {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.eventInfoCardRelacionado {
+  padding: 20px;
+  padding-top: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eventInfoCardRelacionado h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.eventInfoCardRelacionado p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .eventImageCardRelacionado {
+    height: 150px;
+  }
+
+  .eventInfoCardRelacionado h2 {
+    font-size: 1rem;
+  }
+
+  .eventInfoCardRelacionado p {
+    font-size: 0.9rem;
+  }
+}
