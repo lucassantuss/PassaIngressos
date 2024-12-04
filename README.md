@@ -51,7 +51,7 @@
 <h2 id="api"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Link.png" alt="Link" width="25" height="25" /> API (Swagger)</h2>
 
 <p align="center">
-    <img src="./assets/img/api/swagger01.png" alt="Swagger API" width="725px">
+    <img src="./assets/img/api/swagger01.png" alt="Swagger API" width="750px">
 </p>
 
 <h2 id="cicd"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Repeat%20Button.png" alt="Repeat Button" width="25" height="25" /> CI/CD (GitHub Actions)</h2>
@@ -64,8 +64,8 @@
 <h2 id="tests"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" alt="Check Mark Button" width="25" height="25" /> Unit Tests (xUnit)</h2>
 
 <p align="center">
-    <img src="./assets/img/unit tests/test01.png" alt="Unit Tests 01" width="450px">
-    <img src="./assets/img/unit tests/test02.png" alt="Unit Tests 02" width="450px">
+    <img src="./assets/img/unit tests/test01.png" alt="Unit Tests 01" width="500px">
+    <img src="./assets/img/unit tests/test02.png" alt="Unit Tests 02" width="500px">
 </p>
 
 <h2 id="responsivepages"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mobile%20Phone.png" alt="Mobile Phone" width="25" height="25" /> Responsive Pages</h2>
