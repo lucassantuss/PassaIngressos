@@ -3,6 +3,14 @@
 <p align="center">
  <a href="#layout">Layout</a> • 
  <a href="#tech">Technologies</a> • 
+ <a href="#api">API (Swagger)</a> • 
+ <a href="#cicd">CI/CD (GitHub Actions)</a> • 
+ <a href="#tests">Unit Tests (xUnit)</a>
+</p>
+
+<p align="center">
+ <a href="#responsivepages">Responsive Pages</a> • 
+ <a href="#architecture">Architecture</a> • 
  <a href="#colab">Collaborators</a> •
  <a href="#license">License</a>
 </p>
@@ -39,6 +47,41 @@
 <h2 id="tech">💻 Technologies</h2>
 
 [![My Skills](https://skillicons.dev/icons?i=react,cs,dotnet,azure,visualstudio,vscode,vercel,githubactions,git,html,js,nodejs,css,bootstrap,figma)](https://skillicons.dev)
+
+<h2 id="api"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Link.png" alt="Link" width="25" height="25" /> API (Swagger)</h2>
+
+<p align="center">
+    <img src="./assets/img/api/swagger01.png" alt="Swagger API" width="750px">
+</p>
+
+<h2 id="cicd"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Repeat%20Button.png" alt="Repeat Button" width="25" height="25" /> CI/CD (GitHub Actions)</h2>
+
+<p align="center">
+    <img src="./assets/img/github actions/github01.png" alt="Workflow CI/CD" width="400px">
+    <img src="./assets/img/github actions/github02.png" alt="Steps CI/CD" width="400px">
+</p>
+
+<h2 id="tests"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" alt="Check Mark Button" width="25" height="25" /> Unit Tests (xUnit)</h2>
+
+<p align="center">
+    <img src="./assets/img/unit tests/test01.png" alt="Unit Tests 01" width="500px">
+    <img src="./assets/img/unit tests/test02.png" alt="Unit Tests 02" width="500px">
+</p>
+
+<h2 id="responsivepages"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mobile%20Phone.png" alt="Mobile Phone" width="25" height="25" /> Responsive Pages</h2>
+
+<p align="center">
+    <img src="./assets/img/responsive pages/mobile01.jpg" alt="Responsive Page 1" width="200px">
+    <img src="./assets/img/responsive pages/mobile02.jpg" alt="Responsive Page 2" width="200px">
+    <img src="./assets/img/responsive pages/mobile03.jpg" alt="Responsive Page 3" width="200px">
+    <img src="./assets/img/responsive pages/mobile04.jpg" alt="Responsive Page 4" width="200px">
+</p>
+
+<h2 id="architecture"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" alt="Gear" width="25" height="25" /> Architecture</h2>
+
+<p align="center">
+    <img src="./assets/img/architecture/architecture.jpg" alt="Architecture" width="500px">
+</p>
 
 <h2 id="colab">🤝 Collaborators</h2>
 
